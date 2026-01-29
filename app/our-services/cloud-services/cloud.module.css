@@ -1,0 +1,216 @@
+.servicecard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(116,40,148,0.2);
+}
+.iconcircle:hover {
+  transform: rotate(360deg);
+  background-color: rgba(255,255,255,0.2);
+}
+.btnsecondary:hover {
+  transform: scale(1.05);
+  background-color: rgba(116,40,148,0.05);
+}
+.container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.heroSection {
+  position: relative;
+  background-color: rgb(116,40,148);
+  color: white;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto 0 2%;
+  padding: 6% 5% 1%;
+  width: 45%;
+}
+.subTitle1,
+.subTitle2,
+.intro,
+.card,
+.trustCard,
+.conclusionCard {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+.show .subTitle1,
+.show .subTitle2,
+.show .intro,
+.show .card,
+.show .trustCard,
+.show .conclusionCard {
+  opacity: 1;
+  transform: translateY(0);
+}
+.subTitle1 {
+  transition-delay: 0.3s;
+}
+
+.subTitle2 {
+  transition-delay: 0.6s;
+}
+
+.intro {
+  transition-delay: 1.2s;
+}
+
+.conclusionCard {
+  transition-delay: 1.5s;
+}
+.section {
+  margin: 0 auto;
+  padding: 50px 20px 0;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(116,40,148);
+  margin-top: 0;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-top: 4px solid rgb(116,40,148);
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+}
+
+.show .card {
+  transform: scale(1);
+}
+
+.cardIcon {
+  color: rgb(116,40,148);
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+}
+.whyChooseSection {
+  background-color: rgba(116,40,148,0.05);
+  padding: 80px 20px;
+}
+
+.trustGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.trustCard {
+  background-color: rgba(116,40,148,0.03);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+}
+
+.show .trustCard {
+  transform: scale(1);
+}
+.whatWeDoSection {
+  background-color: rgb(116,40,148);
+  color: white;
+  padding: 80px 20px;
+}
+
+.whatWeDoGrid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.iconCircle {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.5s ease;
+}
+.conclusionCard {
+  background: linear-gradient(135deg, rgba(116,40,148,0.1) 0%, rgba(116,40,148,0.05) 100%);
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+  transform: scale(0.95);
+}
+
+.show .conclusionCard {
+  transform: scale(1);
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.button {
+  padding: 15px 40px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton {
+  background-color: white;
+  color: rgb(116,40,148);
+  border: 2px solid rgb(116,40,148);
+}

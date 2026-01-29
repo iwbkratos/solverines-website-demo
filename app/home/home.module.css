@@ -1,0 +1,577 @@
+.bleft {
+  display: inline-block; 
+  width: 50px;
+  height: 2px; 
+  background-color:rgb(116,40,148); 
+  vertical-align: middle;
+  margin: 0 auto; 
+  position: relative; 
+  margin-right: 2%;
+  margin-left: 2%;
+  color: rgb(116,40,148);
+}
+
+.slideshowHeader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.imageContainer{
+  width: 20%;
+  height: 100vh;
+} 
+.imageWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation-fill-mode: forwards;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+
+.hidden {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.imageFromTop {
+  opacity: 1;
+  z-index: 1;
+  animation: slideInFromTop 0.4s ease-in-out forwards;
+}
+
+.imageFromBottom {
+  opacity: 1;
+  z-index: 1;
+  animation: slideInFromBottom 0.3s ease-in-out forwards;
+}
+
+@keyframes moveUpTriangle {
+  0% {
+    transform: translateY(100vh); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); 
+    opacity: 0.7;
+  }
+}
+
+
+@keyframes moveUpNormalTriangle {
+  0% {
+    transform: translateY(100vh); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); 
+    opacity: 1;
+  }
+}
+
+.triangle {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 25vw solid transparent;
+  border-top: 75vh solid #8d34db93;
+  opacity: 0; 
+  animation: none; 
+}
+
+.normaltriangle {
+  position: absolute;
+  z-index: 2;
+  bottom: -15vh;
+  left: -17vw;
+  width: 0;
+  height: 0;
+  border-left: 21vw solid transparent;
+  border-right: 19vw solid transparent; 
+  border-bottom: 52vh solid rgba(165, 165, 165, 0.511); 
+  opacity: 0;
+  animation: none;
+}
+
+
+.triangle.trianglevisible {
+  animation: moveUpTriangle 1s ease-in-out forwards;
+  animation-fill-mode: forwards;
+}
+
+.normaltriangle.trianglevisible {
+  animation: moveUpNormalTriangle 1s ease-in-out forwards;
+  animation-delay: 0.5s; 
+  animation-fill-mode: forwards; 
+}
+
+.caption {
+  margin-top: 20%;
+  position: absolute;
+  bottom: 15;
+  left: 25%;
+  right: 3%;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation-fill-mode: forwards;
+  color: white;
+}
+
+.caption.visible {
+  animation: fadeInFromLeft 1s ease-in-out forwards;
+  animation-delay: 0.5s; 
+}
+
+
+.caption.fadeOut {
+  animation: fadeOutToLeft 1s ease-in-out forwards;
+}
+@media (max-width: 1000px) {
+  .caption h1{
+    margin-top: 20%; 
+    font-size: calc(1rem + 1vw); 
+  }
+  
+}
+@media (max-width: 1000px) {
+  .navMenu {
+    display: none; 
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutToLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+}
+
+/* ----------------------------- */
+.section1{
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+.s1grid{
+  padding: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: rgb(116,40,148);
+  color: white;
+}
+.s1span{
+  font-weight: bolder;
+  padding-bottom: 2%;
+}
+/* ----- */
+
+.section2 {
+  width: 100%;
+  position: relative;
+}
+
+.s3left {
+  padding: 10% ;
+  /* border: 1px solid rgb(124, 143, 33); */
+}
+
+.globe {
+  /* flex: 1; */
+  /* border: 1px solid rgb(0, 0, 0); */
+  width: 90%;
+  height: 600px;
+  padding-left: 5%;
+}
+
+@media (max-width: 576px) {
+  .globe {
+   width: 90%;
+   height: 200px;
+  }
+}
+
+
+
+/* ----------- */
+
+
+/* .logo{
+  margin-top: 15px;
+  color: #51609B;
+  color: #525356;
+  font-weight: bold;
+}
+@keyframes spin {
+  0%{
+    background-position-x: 0;
+    
+  }
+  100%{
+    background-position-x: 380px;
+  }
+} */
+/* ---------- */
+
+.s2subTitle {
+  font-size:large;
+  font-weight: bold;
+  color: rgb(116,40,148);
+  margin-bottom: 5%;
+}
+
+.secTitle {
+  color: #222;
+  font-weight: bolder;
+  line-height: 1.5;
+}
+
+.secDesc {
+  font-size: 16px;
+  /* color: #9ca3a5; */
+  color: #7e8485;
+  line-height: 1.8;
+
+}
+
+
+.gridItem {
+  padding: 5% 15%; 
+  /* border: 1px solid black; */
+  background-color: white;
+  /* transition: transform 0.3s, background-image 0.3s; */
+}
+
+.gridItem:hover {
+  /* transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  background-image: url('/images/bg/Frame152.png');
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+.s3Img{
+  /* border: 1px solid black; */
+padding-bottom: 2%;
+}
+.s3Title {
+  /* text-decoration: none; */
+  color: inherit;
+  font-weight: bold;
+  min-height: 60px;
+  display: block;
+  margin-top:0px;
+  /* border: 1px solid black; */
+}
+
+.s3desc {
+  /* border: 1px solid black; */
+  min-height: 120px;
+  display: block;
+  color: #7e8485;
+  font-size:small;
+  line-height: 1.8;
+}
+
+.button {
+  text-transform: "none";
+  /* background-color: rgb(116,40,148); 
+  color: white;  */
+  position: relative;
+  background: none;
+  color: rgb(116,40,148);
+  transition: background-color 0.3s, color 0.3s;
+  align-items: center;
+  display: flex;
+  width: 140px;
+  /* height: 45px; */
+  text-decoration: none;
+  font-size:large;
+  font-weight: bolder;
+  /* bottom: 10px; */
+  /* border: 1px solid black; */
+  padding-bottom: 0px;
+  margin-top: 2%;
+}
+.gridItem:hover .s3desc{
+color: white;
+}
+.gridItem:hover .button{
+  /* background-color: white; 
+  color:rgb(116,40,148) ; */
+  color: white;
+}
+.button:hover{
+  margin-left: 5px;
+   transition: margin 0.3s;
+}
+.button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px; 
+  background-color: rgb(237, 233, 238); 
+  transition: width 0.5s ease-in-out;
+  padding: 0%;
+}
+
+.button:hover::after {
+  width: 70%; 
+}
+.s3img{
+  background-image: url('/images/bg/3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.section3{
+  background-color: #F7F7F7;
+  /* border: 1px solid black; */
+}
+.s3container{
+  /* border: 1px solid black; */
+  margin: 10% 5%;
+
+}
+.s3bicon {
+  /* border: 1px solid black; */
+  margin-left: 8px; 
+  transition: opacity 0.3s ease; 
+  padding-top: 5%;
+  padding-bottom: 0%;
+  /* display: none; */
+}
+
+.button:hover .s3bicon {
+  opacity: 1; 
+  display: inline;
+}
+/* .backgroundBox {
+  background-image: url('/images/bg/halfcircle.png');
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+} */
+
+/* ----------------- */
+
+
+.s4Title {
+  text-align: center;
+  color:rgb(116,40,148) ;
+}
+
+.sec4Title {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 2px;
+}
+
+.folioItem {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+.folioItem img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.folioItem:hover img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+.folioContent {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  width: 60%; 
+  /* border: 1px solid black; */
+  /* height: 30%; */
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 5%;
+}
+.folioContentv {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  /* border: 1px solid black;  */
+  width: 100%;
+ 
+}
+.fm {
+  /* border: 1px solid black;  */
+  position: absolute;
+  opacity: 1;
+  width: 100%;
+}
+
+.folioItem:hover .folioContentv {
+  height: 30%;
+}
+
+.folioItem:hover .foliobutton {
+  animation: folioInFromLeft 0.7s ease-in-out forwards;
+  padding-left: 18%;
+}
+
+@keyframes folioInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cat {
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------------------- */
+
+/* .s5box:hover .image-circle{
+  background-color: rgb(125, 51, 156);
+  color: white;
+  border: 2px solid rgb(125, 51, 156);
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out; 
+} */
+/* ------------------------- */
+@media (min-width: 400px) {
+  .s6box {
+    height: 69%;
+  }
+}
+.s6box {
+  text-align: center; 
+  padding: 10% 2%;
+  border: 1px solid #ddd;
+  border-radius: 2%;
+  background: #fff;
+  font-weight: bolder;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  position: relative; 
+  overflow: hidden; 
+  /* border: 1px solid black; */
+  
+}
+
+.s6box::before {
+  content: "";
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/bg/box.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.s6box:hover::before {
+  transform: translateY(-100%);
+}
+
+.s6box:hover > * {
+  color: white; 
+  position: relative; 
+  z-index: 1;
+}
+.s6box:hover{
+  background-color:  rgb(116,40,148);
+}
+/* ----------- */
+
+.footer_02 {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  background-image: url('/images/bg/footer.png');
+  background-size: cover;
+  background-position:left;
+  background-repeat: no-repeat;
+}
+
+.section6 {
+  background-color: #fbf9fc;
+  padding: 20px;
+}
+
+ /* -------------  7*/
+ .s7row{
+  /* border: 1px solid black ; */
+  /* padding: 0% 5%; */
+  padding: 40px 185px 36px;
+}
+@media (max-width: 1000px) {
+  .s7row {
+    padding: 0% 5%;
+  }
+}
